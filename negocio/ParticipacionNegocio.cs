@@ -14,9 +14,9 @@ namespace negocio
             var participacion = new Participacion
             {
                 CodigoVoucher = codigoVoucher,
-                IdPremio = idPremio,
-                DniCliente = dniCliente,
-                Fecha = DateTime.Now
+                Premio = new Premio { Id = idPremio },
+                Cliente = new Cliente { Documento = dniCliente.ToString() },
+                FechaCanje = DateTime.Now
             };
 
             ConexionDB.GuardarParticipacion(participacion);

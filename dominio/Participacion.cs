@@ -8,10 +8,9 @@ namespace dominio
 {
     public class Participacion
     {
-        public int Id { get; set; }
         public string CodigoVoucher { get; set; }
-        public int IdPremio { get; set; }
-        public int DniCliente { get; set; }
-        public DateTime Fecha { get; set; }
+        public Cliente Cliente { get; set; }
+        public Premio Premio { get; set; }
+        public DateTime FechaCanje { get; set; }
     }
 }
